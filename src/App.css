@@ -1,32 +1,338 @@
-.App {
+:root{
+  --primary-white: #fff;
+  --primary-color: #397080;
+  --primary-bgcolor: #151515;
+  --secondary-bg-color: #a6c4db;
+  --primary-dark: rgb(48, 46, 46) ;
+  --container-color: #fff;
+  --bluebar-color: #217c9b;
+  --shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
+
+  --border-radius: 20px;
+
+  --primary-font-color: rgb(73, 72, 72);
+}
+
+html{
+  background-color: var(--primary-bgcolor);
+}
+
+                                            /* Importing Fonts  */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('https://fonts.googleapis.com/css?family=Montserrat');
+ }
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200&display=swap');
+
+ @import url("https://fonts.googleapis.com/css?family=Kalam");
+
+ @font-face {
+  font-family: 'Playfair_Display' ;
+  src: url('./assets/fonts/Playfair_Display/Playfair_Display.ttf') format('.ttf'),
+          url('./assets/fonts/Playfair_Display/Playfair_Display\(Variable\).ttf');
+ }
+
+                                            /* Heading tags CSS  */
+h1{
+  padding-top: 3rem;
+  font-size: 2.7rem !important;
+  font-family: 'Playfair_Display'!important ;
+}
+
+h2{
+  font-size: 2.3rem ;
+  font-family: 'Roboto Condensed';
+  font-weight: 600;
+}
+
+h3{
+  font-size: 1rem;
+  font-family: 'Roboto',sans-serif;
+}
+
+.Bg-color{
+  background-color: var(--primary-color)  !important;
+  color: var(--primary-white);
+  padding-top: 2.2rem;
+
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.container{
+  max-width: 1080px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+                                            /* Navbar CSS  */
+
+
+.Navbar-Name{
+  font-family: 'Kalam', serif !important;
+  font-size: 2.8rem;
+  text-decoration: none;
+  color: var(--primary-font-color);
+}
+
+a.nav-link.Navbar-sections h2{
+  font-size: 1.2rem;
+  font-family: 'Roboto Condensed' !important;
+  font-weight: 600 !important;
+}
+
+.Navbar-sections{
+  text-decoration: none !important;
+  letter-spacing: 1.4px !important;
+  cursor: pointer !important;
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+  color: var(--primary-font-color);
+  border-top: 0.1875rem solid var(--primary-white) ;
+}
+
+ .Navbar-sections :hover{
+  color: rgb(134, 128, 128);
+}
+.Navbar-sections:focus{
+  border-top: 0.1875rem solid var(--primary-color);
+}
+
+.Navbar-bg{
+  background-color: var(--primary-white) !important;
+}
+
+                                            /* Home Section CSS */
+
+.home-wrapper{
+  position: relative;
+  background: url('./assets/img/bg-pic.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 85.75vh;
+}
+
+.main-info{
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-info h1{
+  color: var(--secondary-bg-color);
+  text-transform: uppercase;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-main-offer{
+  border: 1px solid var(--primary-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+  letter-spacing: 2.4px !important;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  color: var(--primary-white);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.btn-main-offer:hover{
+  background-color: var(--primary-color);
+  color: var(--primary-white);
+  transition: .2s ease-in-out;
+}
+
+.typewriter{
+  justify-content: center;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-bottom: 3px;
+}
+
+                                            /* About Section CSS */
+
+.react-multiple-carousel__arrow--left{
+  left: calc(0,0);
+  margin-left: -20px;
+  background-color: #151515 !important;
+}
+
+.react-multiple-carousel__arrow--right{
+  left: calc(0,0);
+  margin-right: -20px;
+  background-color: #151515 !important;
+}
+
+.CircularProgressbar .CircularProgressbar-path {
+  stroke: var(--bluebar-color) !important;
+}
+
+.about-section{
+  padding: 0 0 50px 0;
+  position: relative;
+  background-color: #151515;
+  color: white;
+}
+
+.skill-box{
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -60px;;
+}
+
+.about-section h2{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 45px;
+  font-family: 'Roboto';
+  font-weight: 550;
+}
+
+.about-section p{
+  color: var(--primary-color);
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5rem;
+  margin: 14px 0 75px 0;
+}
+
+.skill-slider{
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.skill-slider .item img{
+  width: 50%;
+  height: auto;
+}
+
+.progressbar{
+  stroke: white !important;
+  stroke-width: 1;
+  width: 50%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto 15px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+
+                                            /* Projects CSS */
+
+.project-section{
+  background-image: url('/src/assets/img/portfolio-bg.avif') ;
+  /* background-color: var(--primary-bgcolor); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 85.75vh; */
+  color: var(--primary-white);
 }
+
+.project-section h1{
+  font-weight: 700 !important;
+}
+
+.project-section h2{
+  /* font-family: 'Ubuntu', sans-serif; */
+  font-weight: 900 !important;
+
+}
+
+                                          /* PricingCard CSS  */
+
+  .pricing{
+    width: 100%;
+    padding: 6rem 1rem;
+    /* background-color: #151515; */
+  }
+
+  .card-container{
+    max-width: 1140px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+  }
+
+  .pricing-card{
+    text-align: center;
+    border: 1px solid #eee;
+    color: #eee;
+    background-color: #151515;
+    padding: 1rem;
+    border-radius: 10px ;
+  }
+
+  .pricing-card:hover{
+    background-color: black;
+  }
+
+  .pricing-card h3{
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .pricing-card p{
+    padding: 10px 0;
+  }
+
+  .bar{
+    border-bottom: 1px solid #eee;
+    width: 40%;
+    margin: 1.5rem auto;
+    display: block;
+  }
+
+  .btc{
+    font-size: 4rem;
+    font-weight: 600;
+    padding: 1rem 0;
+  }
+  
+  .btn{
+    display: block;
+    width: 80%;
+    margin: 2rem auto;
+    background-color: yellow !important;
+  }
+
+  @media screen and (max-width: 740px) {
+    .card-container{
+      max-width: 90%;
+      margin: auto;
+      grid-template-columns:  1fr;
+    }
+  }
+
+                                            /* Footer CSS */
+
+.footer{
+  padding-left: 30rem;
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -36,3 +342,16 @@
     transform: rotate(360deg);
   }
 }
+
+/* Mobile Responsive CSS  */
+
+@media (max-width: 768px )  {
+
+/* Navbar  */
+
+.Navbar-sections h2{
+  font-weight: 400 !important;
+}
+  
+}
+
