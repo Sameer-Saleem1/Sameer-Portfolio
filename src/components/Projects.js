@@ -1,5 +1,8 @@
-import React from 'react'
+import React from 'react';
 import {Link} from'react-router-dom';
+import ProjectCard from './ProjectCard';
+import ProjectCardData from './ProjectCardData';
+
 
 export default function Projects() {
   return (
@@ -9,6 +12,30 @@ export default function Projects() {
              <h1>Projects.</h1> 
              <h2>Some of my recent works</h2>
           </div>
+
+                                     {/* Dynamic Work Card  */}
+
+    <div className='work-container'>
+      {/* <h1 className='project-heading'>Projects</h1> */}
+      <div className='project-container'> 
+        {ProjectCardData.map((value,index) => {
+          return(
+            <ProjectCard 
+            key={index}
+            imgsrc={value.imgsrc}
+            title={value.title}
+            text={value.text}
+            view={value.view}
+            source={value.source}
+            />
+          )
+        })}
+      </div>
+          
+    </div>     
+
+                                      {/* Pricing Card  */}
+
           <div className='pricing'>
               <div className='card-container'>
                   <div className='pricing-card'> 
@@ -19,7 +46,7 @@ export default function Projects() {
                       <p>- 3 Pages -</p>
                       <p>- Featured -</p>
                       <p>- Responsive Design -</p>
-                      <Link to={'/contact'} className='btn' >PURCHASE NOW</Link>
+                      <Link to={'/contact'} style={{backgroundColor:'yellow'}} className='btn' >PURCHASE NOW</Link>
                   </div>
 
                   <div className='pricing-card'> 
@@ -30,7 +57,7 @@ export default function Projects() {
                       <p>- 5 Pages -</p>
                       <p>- Featured -</p>
                       <p>- Responsive Design -</p>
-                      <Link to={'/contact'} className='btn' >PURCHASE NOW</Link>
+                      <Link to={'/contact'} style={{backgroundColor:'yellow'}} className='btn' >PURCHASE NOW</Link>
                   </div>
 
                   <div className='pricing-card'> 
@@ -41,7 +68,7 @@ export default function Projects() {
                       <p>- 8 Pages -</p>
                       <p>- Featured -</p>
                       <p>- Responsive Design -</p>
-                      <Link to={'/contact'} className='btn' >PURCHASE NOW</Link>
+                      <Link to={'/contact'} style={{backgroundColor:'yellow'}} className='btn' >PURCHASE NOW</Link>
                   </div>
               </div>
           </div>

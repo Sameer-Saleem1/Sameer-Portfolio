@@ -38,7 +38,7 @@ export default function About() {
                         Skills
                       </h2>
                       <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos mollitia illum ullam iure assumenda, saepe tempora eum. Sit asperiores reprehenderit provident deserunt nostrum. Eum cumque maxime optio fuga numquam?
+                      Welcome to my Skills Corner! I'm a front-end developer and UI/UX designer with a passion for innovation. Proficient in React, Bootstrap, JavaScript, Next.js, Node.js, HTML, and CSS, I specialize in crafting dynamic, responsive websites tailored to client requirements. Notable projects include a HealthCare Website, TextUtils App for text manipulation, and dynamic portfolio websites. Explore a fusion of creativity and precision in every line of code, backed by a track record of delivering solutions that make an impact.
                       </p>
 
                       <Carousel responsive={responsive} infinite={true} className='skill-slider'>

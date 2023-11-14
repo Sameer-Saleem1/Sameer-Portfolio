@@ -15,9 +15,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div>
+    <>
         <Navbar />
-        <div >
             <Routes>
                       <Route exact path={"/"} element={<Home/>}></Route>
                       <Route path={"/about"} element={<About/>}></Route>
@@ -25,9 +24,8 @@ function App() {
                       <Route path={"/review"} element={<Reviews/>}></Route>
                       <Route path={"/contact"} element={<Contact/>}></Route>
             </Routes>
-        </div>
         {/* <Footer/> */}
-      </div>
+      </>
   );
 }
 

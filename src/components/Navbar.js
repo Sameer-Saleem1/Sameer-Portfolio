@@ -8,8 +8,8 @@ export default function Header() {
     <Navbar expand="lg" className="bg-body-tertiary ">
     <Container>
       <Navbar.Brand> <Link className='Navbar-Name' to={"/"}>Sameer</Link></Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav " className='shadow-none border-0'/>
-      <Navbar.Collapse id="basic-navbar-nav ">
+      <Navbar.Toggle aria-controls="basic-navbar-nav" className='shadow-none border-0'/>
+      <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="navbar-nav mx-auto">
           <Nav.Link><Link className='nav-link Navbar-sections' to={"/"}><h2>Home</h2></Link></Nav.Link>
           <Nav.Link><Link className='nav-link Navbar-sections' to={"/about"}><h2>About</h2></Link></Nav.Link>

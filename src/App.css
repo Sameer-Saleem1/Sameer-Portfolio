@@ -95,7 +95,6 @@ a.nav-link.Navbar-sections h2{
   padding-left: 1.25rem !important;
   padding-right: 1.25rem !important;
   color: var(--primary-font-color);
-  border-top: 0.1875rem solid var(--primary-white) ;
 }
 
  .Navbar-sections :hover{
@@ -107,6 +106,22 @@ a.nav-link.Navbar-sections h2{
 
 .Navbar-bg{
   background-color: var(--primary-white) !important;
+}
+
+@media screen and (max-width: 740px) {
+
+  .Navbar-Name{
+    font-size: 2.5em !important;
+  }
+
+  .Navbar-sections{
+    text-align: center;
+    padding-left: -0.5rem !important;
+    padding-right: -5rem !important;
+  }
+  .Navbar-sections:focus{
+    border-top: 0.1875rem solid var(--primary-color);
+  }
 }
 
                                             /* Home Section CSS */
@@ -152,7 +167,7 @@ a.nav-link.Navbar-sections h2{
 .btn-main-offer:hover{
   background-color: var(--primary-color);
   color: var(--primary-white);
-  transition: .2s ease-in-out;
+  transition: .25s ease-in-out;
 }
 
 .typewriter{
@@ -181,7 +196,7 @@ a.nav-link.Navbar-sections h2{
 }
 
 .about-section{
-  padding: 0 0 50px 0;
+  padding: 0 0 30px 0;
   position: relative;
   background-color: #151515;
   color: white;
@@ -191,7 +206,6 @@ a.nav-link.Navbar-sections h2{
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
-  margin-top: -60px;;
 }
 
 .about-section h2{
@@ -204,10 +218,11 @@ a.nav-link.Navbar-sections h2{
 
 .about-section p{
   color: var(--primary-color);
-  font-size: 18px;
+  font-size: 1rem;
   letter-spacing: 0.8px;
   line-height: 1.5rem;
   margin: 14px 0 75px 0;
+  font-weight: 400;
 }
 
 .skill-slider{
@@ -257,10 +272,69 @@ a.nav-link.Navbar-sections h2{
 
 .project-section h2{
   /* font-family: 'Ubuntu', sans-serif; */
+  padding: 1rem 0;
   font-weight: 900 !important;
 
 }
 
+
+                                          /* Dynamic Work CSS  */
+
+  .project-heading{
+    text-align: center;
+    padding: 4rem 0 2rem 0 ;
+  }
+
+  .project-container{
+    max-width: 1140px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    padding: 2rem;
+  }
+
+  .project-card{
+    background-color: #151515;
+    padding: 1.2rem 1rem;
+    border-radius: 10px;
+  }
+
+
+  .project-card img{
+    width: 100%;
+    position: relative;
+  }
+
+  .project-title{
+    color: #eee;
+    padding: 1rem 0;
+  }
+  .project-details p{
+    padding-bottom: 1rem ;
+    font-size: 1.1rem;
+    /* text-align: justify; */
+  }
+
+  .project-btn{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+
+  .project-btn .btn{
+    padding: 0.5rem 1rem !important;
+    background-color: yellow !important;
+    color: #151515;
+  }
+
+  @media screen and (max-width: 740px){
+    .project-container{
+      max-width: 90%;
+      margin: auto;
+      grid-template-columns:  1fr;
+    }
+  }
                                           /* PricingCard CSS  */
 
   .pricing{
@@ -312,7 +386,7 @@ a.nav-link.Navbar-sections h2{
     padding: 1rem 0;
   }
   
-  .btn{
+  .card .btn{
     display: block;
     width: 80%;
     margin: 2rem auto;
@@ -326,6 +400,92 @@ a.nav-link.Navbar-sections h2{
       grid-template-columns:  1fr;
     }
   }
+
+
+                                            /* Contact CSS */
+
+
+  .contact-section{
+    background: url('./assets/img/contact-bg.avif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--primary-white);
+    padding-bottom: 3rem;
+  }
+
+  .contact-section h3{
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 0.4px;
+    line-height: 1.4rem;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
+    font-family: 'roboto condensed', sans-serif;
+    font-weight: 400;
+  }
+  .contact-title{
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  form{
+    background-color: #151515;
+    display: flex;
+    flex-direction: column;
+    padding-bottom:4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    max-width: 600px;
+  }
+
+  form h2{
+    font-size: 1.4rem !important;
+    font-family: 'Ubuntu' !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.3px !important;
+    text-align: center;
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+  }
+
+
+  form input, form textarea{
+    margin-bottom: 1rem;
+    padding: 8px 18px;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: transparent;
+    border-radius: 0.5rem;
+    color: #eee;
+  }
+  .contact-section .btn{
+    padding: 0.5rem 1rem !important;
+    background-color: yellow !important;
+    color: #151515;
+    border-color: transparent;
+    transition: all ease-in-out 300ms;
+    cursor: pointer;
+    
+  }
+
+  .contact-section .btn:hover{
+  color: #fff;
+  background-image: linear-gradient(to right , var(--secondary-bg-color), var(--primary-color  )) ;
+  box-shadow: 2px 2px 13px 2px rgba(255, 255, 255, 0.85);
+  transition: box-shadow .2s linear;
+  border-color: transparent;
+  padding: 12px 21px;
+  }
+
+  label{
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+
+  
 
                                             /* Footer CSS */
 

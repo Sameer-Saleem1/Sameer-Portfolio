@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Typewriter } from 'react-simple-typewriter';
 // import { ArrowRightCircle } from 'react-bootstrap-icons';
 
@@ -20,10 +21,9 @@ export default function Home() {
             />
           </span>
         </h2>
-        <a href='/' className='btn-main-offer' >
+        <Link to='/contact' className='btn-main-offer' >
           Contact me {'  '}
-        {/* <ArrowRightCircle size={22}/> */}
-        </a>
+        </Link>
       </div>
     </div>
   )
