@@ -7,8 +7,6 @@ import Projects from './components/Projects.js'
 import Contact from './components/Contact.js'
 import Reviews from './components/Reviews.js'
 import React from 'react';
-
-
 import {Route, Routes} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
