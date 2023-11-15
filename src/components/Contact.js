@@ -1,5 +1,6 @@
 import React ,{useState} from 'react'
 import { Button, Form } from 'react-bootstrap'
+import LoadingBar from 'react-top-loading-bar'
 
 export default function Contact() {
 
@@ -36,9 +37,27 @@ export default function Contact() {
       console.log(err)     
     }
   }
+  
+
+  const [progress, setProgress] = useState(0)
 
   return (
     <div>
+
+    <LoadingBar
+      color='#397080'
+      progress={progress}
+      onLoaderFinished={() => setProgress(0)}
+      height={3}
+      waitingTime={500}
+      style={
+        {
+          top: "fixed"
+          
+        }
+      }
+    />
+
       <div className='contact-section'>
         <h1 className='contact-title'>Contact Me</h1>
         <h3>For business inquiries or discussions regarding potential projects, please feel free to contact me using the form below. Your input is invaluable, and I am eager to explore opportunities for meaningful partnerships. I appreciate your time and look forward to the prospect of working together.</h3>
@@ -53,7 +72,7 @@ export default function Contact() {
           <label>Message</label>
           <textarea name='message' onChange={handleChange} rows={6} placeholder='Type your message'/>
 
-          <Button className='btn'>Submit</Button>
+          <Button onClick={() => setProgress(100)} className='btn'>Submit</Button>
         </Form>
       </div>
     </div>

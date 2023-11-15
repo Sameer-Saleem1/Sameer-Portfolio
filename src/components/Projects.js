@@ -1,12 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from'react-router-dom';
 import ProjectCard from './ProjectCard';
 import ProjectCardData from './ProjectCardData';
+import LoadingBar from 'react-top-loading-bar';
 
 
 export default function Projects() {
+
+  const [progress, setProgress] = useState(0)
+
   return (
     <>
+
+    <LoadingBar
+    progress={progress}
+    height={3}
+    onLoaderFinished={() => setProgress(0)}
+    color="#397080"
+    waitingTime={300}
+    style={{
+      top: "fixed"
+    }}
+    
+
+    />
+
     <div className='project-section' id='project'>
           <div className='text-center '>
              <h1>Projects.</h1> 
@@ -46,7 +64,7 @@ export default function Projects() {
                       <p>- 3 Pages -</p>
                       <p>- Featured -</p>
                       <p>- Responsive Design -</p>
-                      <Link to={'/contact'} style={{backgroundColor:'yellow'}} className='btn' >PURCHASE NOW</Link>
+                      <Link onClick={() => setProgress(100)} to={'/contact'} style={{backgroundColor:'yellow'}} className='btn' >PURCHASE NOW</Link>
                   </div>
 
                   <div className='pricing-card'> 
@@ -57,7 +75,7 @@ export default function Projects() {
                       <p>- 5 Pages -</p>
                       <p>- Featured -</p>
                       <p>- Responsive Design -</p>
-                      <Link to={'/contact'} style={{backgroundColor:'yellow'}} className='btn' >PURCHASE NOW</Link>
+                      <Link onClick={() => setProgress(100)} to={'/contact'} style={{backgroundColor:'yellow'}} className='btn' >PURCHASE NOW</Link>
                   </div>
 
                   <div className='pricing-card'> 
@@ -68,7 +86,7 @@ export default function Projects() {
                       <p>- 8 Pages -</p>
                       <p>- Featured -</p>
                       <p>- Responsive Design -</p>
-                      <Link to={'/contact'} style={{backgroundColor:'yellow'}} className='btn' >PURCHASE NOW</Link>
+                      <Link onClick={() => setProgress(100)} to={'/contact'} style={{backgroundColor:'yellow'}} className='btn' >PURCHASE NOW</Link>
                   </div>
               </div>
           </div>

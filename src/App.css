@@ -98,10 +98,11 @@ a.nav-link.Navbar-sections h2{
 }
 
  .Navbar-sections :hover{
-  color: rgb(134, 128, 128);
+  color: #151515;
 }
 .Navbar-sections:focus{
   border-top: 0.1875rem solid var(--primary-color);
+  color: #151515 !important;
 }
 
 .Navbar-bg{
