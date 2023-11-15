@@ -98,11 +98,10 @@ a.nav-link.Navbar-sections h2{
 }
 
  .Navbar-sections :hover{
-  color: #151515;
+  color: rgb(134, 128, 128);
 }
 .Navbar-sections:focus{
   border-top: 0.1875rem solid var(--primary-color);
-  color: #151515 !important;
 }
 
 .Navbar-bg{
@@ -156,19 +155,39 @@ a.nav-link.Navbar-sections h2{
 }
 
 .btn-main-offer{
-  border: 1px solid var(--primary-color);
   text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 0;
-  letter-spacing: 2.4px !important;
-  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  border: 1px solid var(--primary-color);
   color: var(--primary-white);
+  display: inline-block;
+  letter-spacing: 2.4px !important;
+  border-radius: 0;
+  padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+  position: relative;
+  text-decoration: none;
+  transition: 0.4s ease;
+  z-index: 1;
+  &:before,
+  &:after {
+    background-color: var(--bluebar-color);
+    transition: 0.3s ease;
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
 }
 
-.btn-main-offer:hover{
-  background-color: var(--primary-color);
-  color: var(--primary-white);
-  transition: .25s ease-in-out;
+.btn-main-offer{
+  &::before {
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  &:hover {
+    &::before {
+      right: 0;
+    }
+  }
 }
 
 .typewriter{
