@@ -1,9 +1,9 @@
-:root{
+:root {
   --primary-white: #fff;
   --primary-color: #397080;
   --primary-bgcolor: #151515;
   --secondary-bg-color: #a6c4db;
-  --primary-dark: rgb(48, 46, 46) ;
+  --primary-dark: rgb(48, 46, 46);
   --container-color: #fff;
   --bluebar-color: #217c9b;
   --shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
@@ -13,82 +13,81 @@
   --primary-font-color: rgb(73, 72, 72);
 }
 
-html{
+html {
   background-color: var(--primary-bgcolor);
 }
 
-                                            /* Importing Fonts  */
+/* Importing Fonts  */
 @font-face {
-  font-family: 'Montserrat';
-  src: url('https://fonts.googleapis.com/css?family=Montserrat');
- }
-
-
- @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200&display=swap');
-
- @import url("https://fonts.googleapis.com/css?family=Kalam");
-
- @font-face {
-  font-family: 'Playfair_Display' ;
-  src: url('./assets/fonts/Playfair_Display/Playfair_Display.ttf') format('.ttf'),
-          url('./assets/fonts/Playfair_Display/Playfair_Display\(Variable\).ttf');
- }
-
-                                            /* Heading tags CSS  */
-h1{
-  padding-top: 3rem;
-  font-size: 2.7rem !important;
-  font-family: 'Playfair_Display'!important ;
+  font-family: "Montserrat";
+  src: url("https://fonts.googleapis.com/css?family=Montserrat");
 }
 
-h2{
-  font-size: 2.3rem ;
-  font-family: 'Roboto Condensed';
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Kalam");
+
+@font-face {
+  font-family: "Playfair_Display";
+  src: url("./assets/fonts/Playfair_Display/Playfair_Display.ttf")
+      format(".ttf"),
+    url("./assets/fonts/Playfair_Display/Playfair_Display\(Variable\).ttf");
+}
+
+/* Heading tags CSS  */
+h1 {
+  padding-top: 3rem;
+  font-size: 2.7rem !important;
+  font-family: "Playfair_Display" !important ;
+}
+
+h2 {
+  font-size: 2.3rem;
+  font-family: "Roboto Condensed";
   font-weight: 600;
 }
 
-h3{
+h3 {
   font-size: 1rem;
-  font-family: 'Roboto',sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-.Bg-color{
-  background-color: var(--primary-color)  !important;
+.Bg-color {
+  background-color: var(--primary-color) !important;
   color: var(--primary-white);
   padding-top: 2.2rem;
-
 }
 
-img{
+img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
 }
 
-.container{
+.container {
   max-width: 1080px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
 }
 
-                                            /* Navbar CSS  */
+/* Navbar CSS  */
 
-
-.Navbar-Name{
-  font-family: 'Roboto', serif !important;
+.Navbar-Name {
+  font-family: "Roboto", serif !important;
   font-size: 2.8rem;
+  font-weight: 600;
   text-decoration: none;
   color: var(--primary-font-color);
 }
 
-a.nav-link.Navbar-sections h2{
+a.nav-link.Navbar-sections h2 {
   font-size: 1.2rem;
-  font-family: 'Roboto Condensed' !important;
+  font-family: "Roboto Condensed" !important;
   font-weight: 600 !important;
 }
 
-.Navbar-sections{
+.Navbar-sections {
   text-decoration: none !important;
   letter-spacing: 1.4px !important;
   cursor: pointer !important;
@@ -97,44 +96,43 @@ a.nav-link.Navbar-sections h2{
   color: var(--primary-font-color);
 }
 
- .Navbar-sections :hover{
+.Navbar-sections :hover {
   color: rgb(134, 128, 128);
 }
-.Navbar-sections:focus{
+.Navbar-sections:focus {
   border-top: 0.1875rem solid var(--primary-color);
 }
 
-.Navbar-bg{
+.Navbar-bg {
   background-color: var(--primary-white) !important;
 }
 
 @media screen and (max-width: 740px) {
-
-  .Navbar-Name{
+  .Navbar-Name {
     font-size: 2.5em !important;
   }
 
-  .Navbar-sections{
+  .Navbar-sections {
     text-align: center;
     padding-left: -0.5rem !important;
     padding-right: -5rem !important;
   }
-  .Navbar-sections:focus{
+  .Navbar-sections:focus {
     border-top: 0.1875rem solid var(--primary-color);
   }
 }
 
-                                            /* Home Section CSS */
+/* Home Section CSS */
 
-.home-wrapper{
+.home-wrapper {
   position: relative;
-  background: url('./assets/img/bg-pic.jpg');
+  background: url("./assets/img/bg-pic.jpg");
   background-size: cover;
   background-position: center;
   height: 85.75vh;
 }
 
-.main-info{
+.main-info {
   letter-spacing: 3px;
   word-spacing: 5px;
   display: flex;
@@ -149,12 +147,12 @@ a.nav-link.Navbar-sections h2{
   text-align: center;
 }
 
-.main-info h1{
+.main-info h1 {
   color: var(--secondary-bg-color);
   text-transform: uppercase;
 }
 
-.btn-main-offer{
+.btn-main-offer {
   text-transform: uppercase;
   border: 1px solid var(--primary-color);
   color: var(--primary-white);
@@ -170,13 +168,13 @@ a.nav-link.Navbar-sections h2{
   &:after {
     background-color: var(--bluebar-color);
     transition: 0.3s ease;
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
   }
 }
 
-.btn-main-offer{
+.btn-main-offer {
   &::before {
     top: 0;
     right: 100%;
@@ -190,23 +188,23 @@ a.nav-link.Navbar-sections h2{
   }
 }
 
-.typewriter{
+.typewriter {
   justify-content: center;
   letter-spacing: 1px;
   text-align: center;
   padding-bottom: 3px;
 }
 
-                                            /* About Section CSS */
+/* About Section CSS */
 
-.react-multiple-carousel__arrow--left{
-  left: calc(0,0);
+.react-multiple-carousel__arrow--left {
+  left: calc(0, 0);
   margin-left: -20px;
   background-color: #151515 !important;
 }
 
-.react-multiple-carousel__arrow--right{
-  left: calc(0,0);
+.react-multiple-carousel__arrow--right {
+  left: calc(0, 0);
   margin-right: -20px;
   background-color: #151515 !important;
 }
@@ -215,28 +213,28 @@ a.nav-link.Navbar-sections h2{
   stroke: var(--bluebar-color) !important;
 }
 
-.about-section{
+.about-section {
   padding: 0 0 30px 0;
   position: relative;
   background-color: #151515;
   color: white;
 }
 
-.skill-box{
+.skill-box {
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
 }
 
-.about-section h2{
+.about-section h2 {
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-size: 45px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: 550;
 }
 
-.about-section p{
+.about-section p {
   color: var(--primary-color);
   font-size: 1rem;
   letter-spacing: 0.8px;
@@ -245,18 +243,18 @@ a.nav-link.Navbar-sections h2{
   font-weight: 400;
 }
 
-.skill-slider{
+.skill-slider {
   width: 80%;
   margin: 0 auto;
   position: relative;
 }
 
-.skill-slider .item img{
+.skill-slider .item img {
   width: 50%;
   height: auto;
 }
 
-.progressbar{
+.progressbar {
   stroke: white !important;
   stroke-width: 1;
   width: 50%;
@@ -273,11 +271,10 @@ a.nav-link.Navbar-sections h2{
   text-align: center;
 }
 
+/* Projects CSS */
 
-                                            /* Projects CSS */
-
-.project-section{
-  background-image: url('/src/assets/img/portfolio-bg.avif') ;
+.project-section {
+  background-image: url("/src/assets/img/portfolio-bg.avif");
   /* background-color: var(--primary-bgcolor); */
   background-position: center;
   background-size: cover;
@@ -286,234 +283,229 @@ a.nav-link.Navbar-sections h2{
   color: var(--primary-white);
 }
 
-.project-section h1{
+.project-section h1 {
   font-weight: 700 !important;
 }
 
-.project-section h2{
+.project-section h2 {
   /* font-family: 'Ubuntu', sans-serif; */
   padding: 1rem 0;
   font-weight: 900 !important;
-
 }
 
+/* Dynamic Work CSS  */
 
-                                          /* Dynamic Work CSS  */
+.project-heading {
+  text-align: center;
+  padding: 4rem 0 2rem 0;
+}
 
-  .project-heading{
-    text-align: center;
-    padding: 4rem 0 2rem 0 ;
-  }
+.project-container {
+  max-width: 1140px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  padding: 2rem;
+}
 
-  .project-container{
-    max-width: 1140px;
+.project-card {
+  background-color: #151515;
+  padding: 1.2rem 1rem;
+  border-radius: 10px;
+}
+
+.project-card img {
+  width: 100%;
+  position: relative;
+}
+
+.project-title {
+  color: #eee;
+  padding: 1rem 0;
+}
+.project-details p {
+  padding-bottom: 1rem;
+  font-size: 1.1rem;
+  /* text-align: justify; */
+}
+
+.project-btn {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.project-btn .btn {
+  padding: 0.5rem 1rem !important;
+  background-color: yellow !important;
+  color: #151515;
+}
+
+@media screen and (max-width: 740px) {
+  .project-container {
+    max-width: 90%;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
-    padding: 2rem;
+    grid-template-columns: 1fr;
   }
+}
+/* PricingCard CSS  */
 
-  .project-card{
-    background-color: #151515;
-    padding: 1.2rem 1rem;
-    border-radius: 10px;
-  }
+.pricing {
+  width: 100%;
+  padding: 6rem 1rem;
+  /* background-color: #151515; */
+}
 
+.card-container {
+  max-width: 1140px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
 
-  .project-card img{
-    width: 100%;
-    position: relative;
-  }
+.pricing-card {
+  text-align: center;
+  border: 1px solid #eee;
+  color: #eee;
+  background-color: #151515;
+  padding: 1rem;
+  border-radius: 10px;
+}
 
-  .project-title{
-    color: #eee;
-    padding: 1rem 0;
-  }
-  .project-details p{
-    padding-bottom: 1rem ;
-    font-size: 1.1rem;
-    /* text-align: justify; */
-  }
+.pricing-card:hover {
+  background-color: black;
+}
 
-  .project-btn{
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 0;
-  }
+.pricing-card h3 {
+  font-size: 1rem;
+  padding: 1rem;
+}
 
-  .project-btn .btn{
-    padding: 0.5rem 1rem !important;
-    background-color: yellow !important;
-    color: #151515;
-  }
+.pricing-card p {
+  padding: 10px 0;
+}
 
-  @media screen and (max-width: 740px){
-    .project-container{
-      max-width: 90%;
-      margin: auto;
-      grid-template-columns:  1fr;
-    }
-  }
-                                          /* PricingCard CSS  */
+.bar {
+  border-bottom: 1px solid #eee;
+  width: 40%;
+  margin: 1.5rem auto;
+  display: block;
+}
 
-  .pricing{
-    width: 100%;
-    padding: 6rem 1rem;
-    /* background-color: #151515; */
-  }
+.btc {
+  font-size: 4rem;
+  font-weight: 600;
+  padding: 1rem 0;
+}
 
-  .card-container{
-    max-width: 1140px;
+.card .btn {
+  display: block;
+  width: 80%;
+  margin: 2rem auto;
+  background-color: yellow !important;
+}
+
+@media screen and (max-width: 740px) {
+  .card-container {
+    max-width: 90%;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
+    grid-template-columns: 1fr;
   }
+}
 
-  .pricing-card{
-    text-align: center;
-    border: 1px solid #eee;
-    color: #eee;
-    background-color: #151515;
-    padding: 1rem;
-    border-radius: 10px ;
-  }
+/* Contact CSS */
 
-  .pricing-card:hover{
-    background-color: black;
-  }
+.contact-section {
+  background: url("./assets/img/contact-bg.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--primary-white);
+  padding-bottom: 3rem;
+}
 
-  .pricing-card h3{
-    font-size: 1rem;
-    padding: 1rem;
-  }
+.contact-section h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  letter-spacing: 0.4px;
+  line-height: 1.4rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+  font-family: "roboto condensed", sans-serif;
+  font-weight: 400;
+}
+.contact-title {
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
 
-  .pricing-card p{
-    padding: 10px 0;
-  }
+form {
+  background-color: #151515;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  max-width: 600px;
+}
 
-  .bar{
-    border-bottom: 1px solid #eee;
-    width: 40%;
-    margin: 1.5rem auto;
-    display: block;
-  }
+form h2 {
+  font-size: 1.4rem !important;
+  font-family: "Ubuntu" !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  text-align: center;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+}
 
-  .btc{
-    font-size: 4rem;
-    font-weight: 600;
-    padding: 1rem 0;
-  }
-  
-  .card .btn{
-    display: block;
-    width: 80%;
-    margin: 2rem auto;
-    background-color: yellow !important;
-  }
+form input,
+form textarea {
+  margin-bottom: 1rem;
+  padding: 8px 18px;
+  font-size: 1.2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: transparent;
+  border-radius: 0.5rem;
+  color: #eee;
+}
+.contact-section .btn {
+  padding: 0.5rem 1rem !important;
+  background-color: yellow !important;
+  color: #151515;
+  border-color: transparent;
+  transition: all ease-in-out 300ms;
+  cursor: pointer;
+}
 
-  @media screen and (max-width: 740px) {
-    .card-container{
-      max-width: 90%;
-      margin: auto;
-      grid-template-columns:  1fr;
-    }
-  }
-
-
-                                            /* Contact CSS */
-
-
-  .contact-section{
-    background: url('./assets/img/contact-bg.avif');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: var(--primary-white);
-    padding-bottom: 3rem;
-  }
-
-  .contact-section h3{
-    font-size: 1.2rem;
-    text-align: center;
-    letter-spacing: 0.4px;
-    line-height: 1.4rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-bottom: 3rem;
-    font-family: 'roboto condensed', sans-serif;
-    font-weight: 400;
-  }
-  .contact-title{
-    text-align: center;
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-  }
-
-  form{
-    background-color: #151515;
-    display: flex;
-    flex-direction: column;
-    padding-bottom:4rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin: auto;
-    max-width: 600px;
-  }
-
-  form h2{
-    font-size: 1.4rem !important;
-    font-family: 'Ubuntu' !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.3px !important;
-    text-align: center;
-    padding-bottom: 3rem;
-    padding-top: 2rem;
-  }
-
-
-  form input, form textarea{
-    margin-bottom: 1rem;
-    padding: 8px 18px;
-    font-size: 1.2rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: transparent;
-    border-radius: 0.5rem;
-    color: #eee;
-  }
-  .contact-section .btn{
-    padding: 0.5rem 1rem !important;
-    background-color: yellow !important;
-    color: #151515;
-    border-color: transparent;
-    transition: all ease-in-out 300ms;
-    cursor: pointer;
-    
-  }
-
-  .contact-section .btn:hover{
+.contact-section .btn:hover {
   color: #fff;
-  background-image: linear-gradient(to right , var(--secondary-bg-color), var(--primary-color  )) ;
+  background-image: linear-gradient(
+    to right,
+    var(--secondary-bg-color),
+    var(--primary-color)
+  );
   box-shadow: 2px 2px 13px 2px rgba(255, 255, 255, 0.85);
-  transition: box-shadow .2s linear;
+  transition: box-shadow 0.2s linear;
   border-color: transparent;
   padding: 12px 21px;
-  }
-
-  label{
-    color: white;
-    margin-bottom: 0.5rem;
-  }
-
-  
-
-                                            /* Footer CSS */
-
-.footer{
-  padding-left: 30rem;
 }
 
+label {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer CSS */
+
+.footer {
+  padding-left: 30rem;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -526,13 +518,10 @@ a.nav-link.Navbar-sections h2{
 
 /* Mobile Responsive CSS  */
 
-@media (max-width: 768px )  {
+@media (max-width: 768px) {
+  /* Navbar  */
 
-/* Navbar  */
-
-.Navbar-sections h2{
-  font-weight: 400 !important;
+  .Navbar-sections h2 {
+    font-weight: 400 !important;
+  }
 }
-  
-}
-
