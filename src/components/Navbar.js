@@ -38,42 +38,34 @@ export default function Header() {
           />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="navbar-nav ms-auto">
-              <Nav.Link>
-                <Link
-                  onClick={() => setProgress(100)}
-                  className="nav-link Navbar-sections"
-                  to={"/"}
-                >
-                  <h2>Home</h2>
-                </Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link
-                  onClick={() => setProgress(100)}
-                  className="nav-link Navbar-sections"
-                  to={"/about"}
-                >
-                  <h2>About</h2>
-                </Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link
-                  onClick={() => setProgress(100)}
-                  className="nav-link Navbar-sections"
-                  to={"/project"}
-                >
-                  <h2>Projects</h2>
-                </Link>
-              </Nav.Link>
-              <Nav.Link>
-                <Link
-                  onClick={() => setProgress(100)}
-                  className="nav-link Navbar-sections"
-                  to={"/contact"}
-                >
-                  <h2>Contact</h2>
-                </Link>
-              </Nav.Link>
+              <Link
+                onClick={() => setProgress(100)}
+                className="nav-link Navbar-sections"
+                to={"/"}
+              >
+                <h2>Home</h2>
+              </Link>
+              <a
+                onClick={() => setProgress(100)}
+                className="nav-link Navbar-sections"
+                href="#about"
+              >
+                <h2>About</h2>
+              </a>
+              <a
+                onClick={() => setProgress(100)}
+                className="nav-link Navbar-sections"
+                href="#project"
+              >
+                <h2>Projects</h2>
+              </a>
+              <a
+                onClick={() => setProgress(100)}
+                className="nav-link Navbar-sections"
+                href="#contact"
+              >
+                <h2>Contact</h2>
+              </a>
             </Nav>
           </Navbar.Collapse>
         </Container>

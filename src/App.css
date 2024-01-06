@@ -84,7 +84,10 @@ img {
 a.nav-link.Navbar-sections h2 {
   font-size: 1.2rem;
   font-family: "Roboto Condensed" !important;
-  font-weight: 600 !important;
+  font-weight: 900 !important;
+}
+a.nav-link.Navbar-sections h2:hover {
+  color: var(--primary-color) !important;
 }
 
 .Navbar-sections {
@@ -96,9 +99,9 @@ a.nav-link.Navbar-sections h2 {
   color: var(--primary-font-color);
 }
 
-.Navbar-sections :hover {
+/* .Navbar-sections :hover {
   color: rgb(134, 128, 128);
-}
+} */
 .Navbar-sections:focus {
   border-top: 0.1875rem solid var(--primary-color);
 }
@@ -129,7 +132,7 @@ a.nav-link.Navbar-sections h2 {
   background: url("./assets/img/bg-pic.jpg");
   background-size: cover;
   background-position: center;
-  height: 85.75vh;
+  height: 86.25vh;
 }
 
 .main-info {
@@ -216,8 +219,9 @@ a.nav-link.Navbar-sections h2 {
 .about-section {
   padding: 0 0 30px 0;
   position: relative;
-  background-color: #151515;
+  background-color: hsl(0, 0%, 8%);
   color: white;
+  height: 100vh;
 }
 
 .skill-box {
@@ -313,6 +317,7 @@ a.nav-link.Navbar-sections h2 {
   background-color: #151515;
   padding: 1.2rem 1rem;
   border-radius: 10px;
+  height: 80vh;
 }
 
 .project-card img {
@@ -338,8 +343,17 @@ a.nav-link.Navbar-sections h2 {
 
 .project-btn .btn {
   padding: 0.5rem 1rem !important;
-  background-color: yellow !important;
+  background-image: linear-gradient(
+    to right,
+    var(--secondary-bg-color),
+    var(--primary-color)
+  ) !important;
   color: #151515;
+}
+.project-btn .btn:hover {
+  padding: 0.5rem 1rem !important;
+  /* background-color: var(--primary-color) !important; */
+  color: white;
 }
 
 @media screen and (max-width: 740px) {
@@ -400,11 +414,15 @@ a.nav-link.Navbar-sections h2 {
   padding: 1rem 0;
 }
 
-.card .btn {
+.pricing-card .btn {
   display: block;
   width: 80%;
   margin: 2rem auto;
-  background-color: yellow !important;
+  background-image: linear-gradient(
+    to right,
+    var(--secondary-bg-color),
+    var(--primary-color)
+  ) !important;
 }
 
 @media screen and (max-width: 740px) {
@@ -476,11 +494,15 @@ form textarea {
 }
 .contact-section .btn {
   padding: 0.5rem 1rem !important;
-  background-color: yellow !important;
-  color: #151515;
+  background-image: linear-gradient(
+    to right,
+    var(--secondary-bg-color),
+    var(--primary-color)
+  ) !important;
   border-color: transparent;
   transition: all ease-in-out 300ms;
   cursor: pointer;
+  color: white;
 }
 
 .contact-section .btn:hover {
