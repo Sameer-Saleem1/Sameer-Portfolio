@@ -4,6 +4,9 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 import React, { useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function Header() {
   const [progress, setProgress] = useState(0);
 
@@ -22,7 +25,7 @@ export default function Header() {
 
       <Navbar expand="lg" fixed="top" className="bg-body-tertiary ">
         <Container>
-          <Navbar.Brand>
+          <Navbar.Brand data-aos="fade-down" data-aos-duration="1000">
             {" "}
             <Link
               onClick={() => setProgress(100)}
@@ -42,6 +45,8 @@ export default function Header() {
                 onClick={() => setProgress(100)}
                 className="nav-link Navbar-sections"
                 to={"/"}
+                data-aos="fade-down"
+                data-aos-duration="1000"
               >
                 <h2>Home</h2>
               </Link>
@@ -49,6 +54,8 @@ export default function Header() {
                 onClick={() => setProgress(100)}
                 className="nav-link Navbar-sections"
                 href="#about"
+                data-aos="fade-down"
+                data-aos-duration="1150"
               >
                 <h2>About</h2>
               </a>
@@ -56,6 +63,8 @@ export default function Header() {
                 onClick={() => setProgress(100)}
                 className="nav-link Navbar-sections"
                 href="#project"
+                data-aos="fade-down"
+                data-aos-duration="1300"
               >
                 <h2>Projects</h2>
               </a>
@@ -63,6 +72,8 @@ export default function Header() {
                 onClick={() => setProgress(100)}
                 className="nav-link Navbar-sections"
                 href="#contact"
+                data-aos="fade-down"
+                data-aos-duration="1450"
               >
                 <h2>Contact</h2>
               </a>
