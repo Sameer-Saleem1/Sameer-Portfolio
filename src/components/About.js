@@ -4,8 +4,11 @@ import "react-multi-carousel/lib/styles.css";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { Col, Container, Row } from "react-bootstrap";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function About() {
+  AOS.init();
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -33,8 +36,10 @@ export default function About() {
           <Row>
             <Col>
               <div className="skill-box">
-                <h2>Skills</h2>
-                <p>
+                <h2 data-aos="fade-down-left" data-aos-duration="800">
+                  Skills
+                </h2>
+                <p data-aos="fade-down-right" data-aos-duration="800">
                   Welcome to my Skills Corner! I'm a front-end developer and
                   UI/UX designer with a passion for innovation. Proficient in
                   React, Bootstrap, JavaScript, Next.js, Node.js, HTML, and CSS,
@@ -46,92 +51,95 @@ export default function About() {
                   delivering solutions that make an impact.
                 </p>
 
-                <Carousel
-                  responsive={responsive}
-                  infinite={true}
-                  className="skill-slider"
-                >
-                  <div className="item">
-                    <div className="progressbar">
-                      <CircularProgressbar value={85} text="85%" />
+                <div data-aos="fade-left" data-aos-duration="800">
+                  {" "}
+                  <Carousel
+                    responsive={responsive}
+                    infinite={true}
+                    className="skill-slider"
+                  >
+                    <div className="item">
+                      <div className="progressbar">
+                        <CircularProgressbar value={85} text="85%" />
+                      </div>
+                      <h3>HTML</h3>
                     </div>
-                    <h3>HTML</h3>
-                  </div>
 
-                  <div className="item">
-                    <div className="progressbar">
-                      <CircularProgressbar value={85} text="85%" />
+                    <div className="item">
+                      <div className="progressbar">
+                        <CircularProgressbar value={85} text="85%" />
+                      </div>
+                      <h3>CSS</h3>
                     </div>
-                    <h3>CSS</h3>
-                  </div>
 
-                  <div className="item">
-                    <div className="progressbar ">
-                      <CircularProgressbar
-                        value={80}
-                        text="80%"
-                        className="yellow"
-                      />
+                    <div className="item">
+                      <div className="progressbar ">
+                        <CircularProgressbar
+                          value={80}
+                          text="80%"
+                          className="yellow"
+                        />
+                      </div>
+                      <h3>JavaScript</h3>
                     </div>
-                    <h3>JavaScript</h3>
-                  </div>
 
-                  <div className="item">
-                    <div className="progressbar">
-                      <CircularProgressbar value={85} text="85%" />
+                    <div className="item">
+                      <div className="progressbar">
+                        <CircularProgressbar value={85} text="85%" />
+                      </div>
+                      <h3>React</h3>
                     </div>
-                    <h3>React</h3>
-                  </div>
 
-                  <div className="item">
-                    <div className="progressbar">
-                      <CircularProgressbar value={75} text="75%" />
+                    <div className="item">
+                      <div className="progressbar">
+                        <CircularProgressbar value={75} text="75%" />
+                      </div>
+                      <h3>Node.js</h3>
                     </div>
-                    <h3>Node.js</h3>
-                  </div>
 
-                  <div className="item">
-                    <div className="progressbar">
-                      <CircularProgressbar value={75} text="75%" />
+                    <div className="item">
+                      <div className="progressbar">
+                        <CircularProgressbar value={75} text="75%" />
+                      </div>
+                      <h3>Angular.js</h3>
                     </div>
-                    <h3>Angular.js</h3>
-                  </div>
 
-                  <div className="item">
-                    <div className="progressbar">
-                      <CircularProgressbar value={75} text="75%" />
+                    <div className="item">
+                      <div className="progressbar">
+                        <CircularProgressbar value={75} text="75%" />
+                      </div>
+                      <h3>Rust</h3>
                     </div>
-                    <h3>Rust</h3>
-                  </div>
 
-                  <div className="item">
-                    <div className="progressbar">
-                      <CircularProgressbar value={85} text="85%" />
+                    <div className="item">
+                      <div className="progressbar">
+                        <CircularProgressbar value={85} text="85%" />
+                      </div>
+                      <h3>Bootstrap</h3>
                     </div>
-                    <h3>Bootstrap</h3>
-                  </div>
 
-                  <div className="item">
-                    <div className="progressbar">
-                      <CircularProgressbar value={85} text="85%" />
+                    <div className="item">
+                      <div className="progressbar">
+                        <CircularProgressbar value={85} text="85%" />
+                      </div>
+                      <h3>Tailwind CSS</h3>
                     </div>
-                    <h3>Tailwind CSS</h3>
-                  </div>
 
-                  <div className="item">
-                    <div className="progressbar">
-                      <CircularProgressbar value={85} text="85%" />
+                    <div className="item">
+                      <div className="progressbar">
+                        <CircularProgressbar value={85} text="85%" />
+                      </div>
+                      <h3>UI/UX Design</h3>
                     </div>
-                    <h3>UI/UX Design</h3>
-                  </div>
 
-                  <div className="item">
-                    <div className="progressbar">
-                      <CircularProgressbar value={85} text="85%" />
+                    <div className="item">
+                      <div className="progressbar">
+                        <CircularProgressbar value={85} text="85%" />
+                      </div>
+                      <h3>Logo Design</h3>
                     </div>
-                    <h3>Logo Design</h3>
-                  </div>
-                </Carousel>
+                  </Carousel>
+                </div>
               </div>
             </Col>
           </Row>

@@ -21,14 +21,22 @@ export default function Projects() {
       />
 
       <div className="project-section" id="project">
-        <div className="text-center ">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="800"
+          className="text-center "
+        >
           <h1>Projects.</h1>
           <h2>Some of my recent works</h2>
         </div>
 
         {/* Dynamic Work Card  */}
 
-        <div className="work-container">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="800"
+          className="work-container"
+        >
           {/* <h1 className='project-heading'>Projects</h1> */}
           <div className="project-container">
             {ProjectCardData.map((value, index) => {
@@ -49,7 +57,11 @@ export default function Projects() {
         {/* Pricing Card  */}
 
         <div className="pricing">
-          <div className="card-container">
+          <div
+            data-aos="fade-down"
+            data-aos-duration="800"
+            className="card-container"
+          >
             <div className="pricing-card">
               <h3>- Basic -</h3>
               <span className="bar"></span>

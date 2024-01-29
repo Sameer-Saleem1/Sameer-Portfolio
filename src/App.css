@@ -98,13 +98,9 @@ a.nav-link.Navbar-sections h2:hover {
   padding-right: 1.25rem !important;
   color: var(--primary-font-color);
 }
-
-/* .Navbar-sections :hover {
-  color: rgb(134, 128, 128);
-} */
-.Navbar-sections:focus {
+/* .Navbar-sections:focus {
   border-top: 0.1875rem solid var(--primary-color);
-}
+} */
 
 .Navbar-bg {
   background-color: var(--primary-white) !important;
@@ -132,7 +128,8 @@ a.nav-link.Navbar-sections h2:hover {
   background: url("./assets/img/bg-pic.jpg");
   background-size: cover;
   background-position: center;
-  height: 86.25vh;
+  height: 88vh;
+  margin-top: 5rem;
 }
 
 .main-info {
@@ -327,7 +324,7 @@ a.nav-link.Navbar-sections h2:hover {
   background-color: #151515;
   padding: 1.2rem 1rem;
   border-radius: 10px;
-  height: 80vh;
+  /* height: 80vh; */
 }
 @media screen and (max-width: 786px) {
   .project-card {
@@ -339,8 +336,8 @@ a.nav-link.Navbar-sections h2:hover {
 }
 
 .project-card img {
-  width: 100%;
-  position: relative;
+  aspect-ratio: 16/9;
+  height: auto !important;
 }
 
 .project-title {
@@ -454,12 +451,12 @@ a.nav-link.Navbar-sections h2:hover {
 /* Contact CSS */
 
 .contact-section {
-  background: url("./assets/img/contact-bg.avif");
+  background: url("./assets/img/contact-bg.avif") no-repeat;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   color: var(--primary-white);
   padding-bottom: 3rem;
+  width: 100% !important;
 }
 
 .contact-section h3 {

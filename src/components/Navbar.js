@@ -20,7 +20,7 @@ export default function Header() {
         }}
       />
 
-      <Navbar expand="lg" className="bg-body-tertiary ">
+      <Navbar expand="lg" fixed="top" className="bg-body-tertiary ">
         <Container>
           <Navbar.Brand>
             {" "}

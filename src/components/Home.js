@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
 import LoadingBar from "react-top-loading-bar";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
   const [progress, setProgress] = useState(0);
+  AOS.init();
 
   return (
     <>
@@ -21,8 +23,14 @@ export default function Home() {
 
       <div className="home-wrapper">
         <div className="main-info">
-          <h1>I am Sameer</h1>
-          <h2 className="typewriter">
+          <h1 data-aos="fade-right" data-aos-duration="1000">
+            I am Sameer
+          </h1>
+          <h2
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            className="typewriter"
+          >
             <span style={{ fontWeight: "bold", color: "red" }}>
               <Typewriter
                 words={["Developer", "Designer", "Photographer"]}
@@ -33,13 +41,15 @@ export default function Home() {
               />
             </span>
           </h2>
-          <Link
+          <a
+            data-aos="fade-up"
+            data-aos-duration="1000"
             onClick={() => setProgress(100)}
-            to="/contact"
+            href="#contact"
             className="btn-main-offer"
           >
             Contact me {"  "}
-          </Link>
+          </a>
         </div>
       </div>
     </>
